@@ -57,7 +57,30 @@
 
   <button onclick="logout()">Logout</button>
 
+  <script><!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - Euclid Coaching</title>
+</head>
+<body>
   <script>
+    // Agar login nahi hai to login page pe bhej do
+    if(localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <h1>Welcome to Dashboard</h1>
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("isLoggedIn");   // Logout karo
+      window.location.href = "login.html";     // Login page pe bhejo
+    }
+  </script>
+</body>
+</html>
     function logout() {
       localStorage.removeItem("isLoggedIn");
       window.location.href = "login.html";

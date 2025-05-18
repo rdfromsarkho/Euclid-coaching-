@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register - Euclid Coaching</title>
+</head>
+<body>
+  <h2>Register</h2>
+  <form onsubmit="registerUser(event)">
+    <input type="text" id="newUsername" placeholder="Username" required><br><br>
+    <input type="password" id="newPassword" placeholder="Password" required><br><br>
+    <input type="submit" value="Register">
+  </form>
+  <p id="msg"></p>
+
+  <script>
+    function registerUser(e) {
+      e.preventDefault();
+      const username = document.getElementById("newUsername").value;
+      const password = document.getElementById("newPassword").value;
+
+      // User info localStorage me save karo
+      localStorage.setItem("regUsername", username);
+      localStorage.setItem("regPassword", password);
+
+      document.getElementById("msg").innerText = "✅ Register ho gaya! Ab login karo.";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Euclid Coaching</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      margin: 0;
+    }
+
+    header {
+      background: #00b09b;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .logout {
+      background: #ff4d4d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      float: right;
+      margin-top: -40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Welcome to Euclid Coaching Dashboard</h2>
+    <button class="logout" onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <h3>📊 Student Info</h3>
+    <p>Yahan tum future me student ke marks, attendance, notes wagairah dikhana chaho toh dikha sakte ho.</p>
+  </main>
+
+  <script>
+    function logout() {
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

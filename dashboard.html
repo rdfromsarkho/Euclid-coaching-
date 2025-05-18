@@ -38,7 +38,34 @@
     }
   </style>
 </head>
+<body><!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
 <body>
+
+  <!-- ✅ Redirect script: only allow logged-in users -->
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <h1>Welcome to Dashboard</h1>
+  <p>Sirf login hone ke baad hi ye page dikh raha hai.</p>
+
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>
 
   <header>
     <h2>Welcome to Euclid Coaching Dashboard</h2>

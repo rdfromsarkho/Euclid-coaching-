@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Dashboard - Euclid Coaching</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f3f3f3;
+      background: linear-gradient(to right, #00b09b, #96c93d);
+      color: white;
       margin: 0;
-    }
-
-    header {
-      background: #00b09b;
-      color: white;
-      padding: 15px 20px;
       text-align: center;
-      position: relative;
+      padding-top: 100px;
     }
-
-    .logout {
-      background: #ff4d4d;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      position: absolute;
-      top: 15px;
-      right: 20px;
+    header {
+      background: #00775b;
+      padding: 15px 0;
+      font-size: 24px;
+      font-weight: bold;
     }
-
     main {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      background: white;
+      max-width: 600px;
+      margin: 40px auto;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      background: white;
+      color: #00b09b;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 30px;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #f0f0f0;
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Redirect if not logged in -->
-  <script>
-    if (localStorage.getItem("isLoggedIn") !== "true") {
-      window.location.href = "login.html";
-    }
-  </script>
-
-  <header>
-    <h2>Welcome to Euclid Coaching Dashboard</h2>
-    <button class="logout" onclick="logout()">Logout</button>
-  </header>
+  <header>Welcome to Euclid Coaching Dashboard</header>
 
   <main>
-    <h3>📊 Student Info</h3>
-    <p>Yahan tum future me student ke marks, attendance, notes wagairah dikhana chaho toh dikha sakte ho.</p>
+    <h1>🎉 Login Successful!</h1>
+    <p>Ab aapka access mil gaya hai. Yahan se aap apne dashboard ka kaam kar sakte hain.</p>
+    <button onclick="logout()">Logout</button>
   </main>
 
   <script>
+    // Login check — agar login nahi hua hai to login.html pe bhej do
+    if(localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+
     function logout() {
-      localStorage.removeItem("isLoggedIn"); // session clear
-      window.location.href = "login.html";   // login pe bhej
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "login.html";
     }
   </script>
 
